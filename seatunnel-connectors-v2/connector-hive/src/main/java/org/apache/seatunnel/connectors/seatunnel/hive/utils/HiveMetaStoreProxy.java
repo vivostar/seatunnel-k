@@ -18,6 +18,11 @@
 package org.apache.seatunnel.connectors.seatunnel.hive.utils;
 
 import org.apache.seatunnel.shade.com.google.common.collect.ImmutableList;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.conf.HiveConf;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.metastore.HiveMetaStoreClient;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.metastore.api.AlreadyExistsException;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.metastore.api.MetaException;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.metastore.api.Table;
 
 import org.apache.seatunnel.api.configuration.ReadonlyConfig;
 import org.apache.seatunnel.connectors.seatunnel.file.hadoop.HadoopLoginFactory;
@@ -29,11 +34,6 @@ import org.apache.seatunnel.connectors.seatunnel.hive.source.config.HiveSourceOp
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hive.conf.HiveConf;
-import org.apache.hadoop.hive.metastore.HiveMetaStoreClient;
-import org.apache.hadoop.hive.metastore.api.AlreadyExistsException;
-import org.apache.hadoop.hive.metastore.api.MetaException;
-import org.apache.hadoop.hive.metastore.api.Table;
 import org.apache.thrift.TException;
 
 import lombok.NonNull;

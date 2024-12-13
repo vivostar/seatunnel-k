@@ -19,6 +19,8 @@ package org.apache.seatunnel.connectors.seatunnel.hive.sink;
 
 import org.apache.seatunnel.shade.com.typesafe.config.Config;
 import org.apache.seatunnel.shade.com.typesafe.config.ConfigValueFactory;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.metastore.api.FieldSchema;
+import org.apache.seatunnel.shade.connector.hive.org.apache.hadoop.hive.metastore.api.Table;
 
 import org.apache.seatunnel.api.common.JobContext;
 import org.apache.seatunnel.api.configuration.ReadonlyConfig;
@@ -46,9 +48,6 @@ import org.apache.seatunnel.connectors.seatunnel.hive.sink.writter.HiveSinkWrite
 import org.apache.seatunnel.connectors.seatunnel.hive.source.config.HiveSourceOptions;
 import org.apache.seatunnel.connectors.seatunnel.hive.storage.StorageFactory;
 import org.apache.seatunnel.connectors.seatunnel.hive.utils.HiveTableUtils;
-
-import org.apache.hadoop.hive.metastore.api.FieldSchema;
-import org.apache.hadoop.hive.metastore.api.Table;
 
 import java.util.List;
 import java.util.Map;
